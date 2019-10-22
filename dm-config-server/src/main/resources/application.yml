@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: dm-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: 
+server:
+  port: 7900
