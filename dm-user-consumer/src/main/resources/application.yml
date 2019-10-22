@@ -1,0 +1,25 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: dm-user-consumer
+  zipkin:
+    base-url: http://localhost:7700
+  sleuth:
+    sampler:
+      percentage: 1.0
+eureka:
+  client:
+    service-url:
+      defaultZone: http://root:123456@localhost:7776/eureka/
+feign:
+  hystrix:
+    enabled: true
+#调整负债均衡
+dm-user-provider:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+logging:
+  level: info
+
+
