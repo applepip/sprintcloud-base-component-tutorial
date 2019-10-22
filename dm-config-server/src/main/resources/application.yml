@@ -5,6 +5,7 @@ spring:
     config:
       server:
         git:
-          uri: 
+          uri: https://github.com/applepip/springcloud-config-demo.git
+          search-paths: config-file
 server:
   port: 7900
